@@ -1,0 +1,20 @@
+.container {
+  margin: 6rem auto 0;
+  width: 90%;
+}
+
+.form {
+  &__element {
+    margin-bottom: .5rem;
+    width: 100%;
+  }
+}
+
+.actions {
+  margin: 0 auto 0;
+  width: 40%;
+
+  &__btn {
+    width: 100%;
+  }
+}

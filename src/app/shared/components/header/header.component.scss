@@ -1,0 +1,43 @@
+.main-header {
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.a_nav_list{
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color .15s ease-in-out;
+  margin-right: 5px;
+
+  &:hover {
+    color: rgb(234, 19, 188);
+  }
+}
+
+.shopping-cart {
+  align-items: center;
+  border-radius: .2rem;
+  cursor: pointer;
+  display: flex;
+  padding: .1rem .5rem;
+  transition: transform .15s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+
+  }
+}
+.delete{
+  display: flex;
+  align-items: center;
+}

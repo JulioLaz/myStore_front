@@ -1,0 +1,120 @@
+<!-- <div class="container">
+  <form class="form" #checkoutForm="ngForm">
+    <mat-form-field class="form__element">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>price</th>
+            <th>description</th>
+            <th>categoryId</th>
+            <th>Stock</th>
+            <th>qty</th>
+            <th>date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><mat-form-field class="form__element">
+                <input matInput placeholder="name" [(ngModel)]="model.name" name="name" #nameInput="ngModel" />
+              </mat-form-field></td>
+            <td><mat-form-field class="form__element">
+                <input matInput placeholder="price" [(ngModel)]="model.price" name="price" #priceInput="ngModel" />
+              </mat-form-field></td>
+            <td><mat-form-field class="form__element">
+                <input matInput placeholder="description" [(ngModel)]="model.description" name="description" #descriptionInput="ngModel" />
+              </mat-form-field></td>
+            <td><mat-form-field class="form__element">
+                <input matInput placeholder="categoryId" [(ngModel)]="model.categoryId" name="categoryId" #categoryIdInput="ngModel" />
+              </mat-form-field></td>
+            <td><mat-form-field class="form__element">
+                <input matInput placeholder="stock" [(ngModel)]="model.stock" name="stock" #stockInput="ngModel" />
+              </mat-form-field></td>
+            <td><mat-form-field class="form__element">
+                <input matInput placeholder="qty" [(ngModel)]="model.qty" name="qty" #qtyInput="ngModel" />
+              </mat-form-field></td>
+            <td><mat-form-field class="form__element">
+                <input matInput placeholder="date" [(ngModel)]="model.date" name="date" #dateInput="ngModel" />
+              </mat-form-field></td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-form-field>
+  </form>
+</div>
+
+<div class="actions">
+  <button (click)="onSubmit(checkoutForm)" [disabled]="!checkoutForm.form.valid" class="actions__btn" color="primary"
+    mat-raised-button type="submit">
+    Comprar
+  </button>
+</div> -->
+
+<div class="container">
+  <form class="form" #newProductForm="ngForm">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Stock</th>
+          <!-- <th>Quantity</th> -->
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <mat-form-field class="form__element">
+              <input matInput placeholder="Name" [(ngModel)]="model.name" name="name" required>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="form__element">
+              <input matInput type="number" placeholder="Price" [(ngModel)]="model.price" name="price" required>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="form__element">
+              <input matInput placeholder="Description" [(ngModel)]="model.description" name="description" required>
+            </mat-form-field>
+          </td>
+          <!-- <td>
+            <mat-form-field class="form__element">
+              <input matInput type="number" placeholder="Category ID" [(ngModel)]="model.categoryId" name="categoryId" required>
+            </mat-form-field>
+          </td> -->
+          <td>
+            <mat-form-field class="form__element">
+              <mat-label>Category</mat-label>
+              <mat-select [(ngModel)]="model.categoryId" name="categoryId" required>
+                <mat-option *ngFor="let category of categorias" [value]="category.id">
+                  {{ category.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="form__element">
+              <input matInput type="number" placeholder="Stock" [(ngModel)]="model.stock" name="stock" required>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="form__element">
+              <input matInput type="date" placeholder="Date" [(ngModel)]="model.date" name="date" required>
+            </mat-form-field>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+
+<div class="actions">
+  <button (click)="onSubmit(newProductForm)" [disabled]="!newProductForm.form.valid" class="actions__btn" color="primary" mat-raised-button type="submit">
+    Add Product
+  </button>
+</div>
+

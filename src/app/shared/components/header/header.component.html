@@ -1,0 +1,13 @@
+<mat-toolbar #categoriasComponent class="main-header" color="primary">
+  <a [routerLink]="['/']">Tienda MiniMarker</a>
+  <app-categorias [routerLink]="['/']" (categoriasSelected)="onCategorySelected($event)"></app-categorias>
+  <!-- <a class="a_nav_list" [routerLink]="['/order']">Ordenes</a> -->
+  <!-- <a class="a_nav_list" [routerLink]="['/newProduct']">Nuevo Producto</a> -->
+  <a class="a_nav_list" [routerLink]="['/login']">Login</a>
+  <!-- <a *ngIf="{quantity$ | async } as dataCart" -->
+  <a *ngIf="quantity$ | async  as dataCart"
+  class="a_nav_list" [routerLink]="['/details']">Detalle</a>
+  <a class="a_nav_list" [routerLink]="['/stores']">Tiendas</a>
+  <app-cart class="shopping-cart" (click)="goToCheckout()"></app-cart>
+  <a class="a_nav_list delete" (click)="clearCart()"><mat-icon>delete_forever</mat-icon><span> Vaciar Carrito</span></a>
+</mat-toolbar>
