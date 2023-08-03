@@ -1,8 +1,5 @@
 iniciar el servidor de JSON SERVER API en http://localhost:3000:npm run serverAPI
 
-
-![Alt text](https://i.ytimg.com/vi/i-oYrcNtc2s/hqdefault.jpg "dominicode")
-
 # Curso de Angular 12
 
 En este curso de Angular 12 aprenderás a trabajar con Angular.
